@@ -35,6 +35,12 @@ public class Exercises {
      * @return the new head of the linked list
      */
     public static ListNode prepend(ListNode head, int toAdd) {
+        if (head == null) {
+            return new ListNode(toAdd);
+        }
+        ListNode newNode = new ListNode(toAdd);
+        newNode.next = head;
+        head = newNode;
         return null;
     }
 
